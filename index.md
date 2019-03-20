@@ -299,10 +299,10 @@ please preview your site before committing, and make sure to run
 </p>
 <p>
   We will be running pre-workshop drop-in sessions to assist with any setup issues.
-  <li>
-    <ul>Town - 2-4pm, Wednesday 22nd May 2019 at the Old Union Diner with Patrick McCann</ul>
-    <ul>North Haugh - 2-4pm, Tuesday 28th May 2019 in the Jack Cole Building with Alex Konovalov</ul>
-  </li>
+  <ul>
+    <li>Town - 2-4pm, Wednesday 22nd May 2019 at the Old Union Diner with Patrick McCann</li>
+    <li>North Haugh - 2-4pm, Tuesday 28th May 2019 in the Jack Cole Building with Alex Konovalov</li>
+  </ul>
 </p>
 <p>
   We maintain a list of common issues that occur during installation as a reference for instructors
