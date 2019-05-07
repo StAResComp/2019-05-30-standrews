@@ -160,6 +160,14 @@ special instructions.
   attempt to provide them.
 </p>
 
+https://www.st-andrews.ac.uk/pdms/index.php?Mode=Search&AudienceID=5&CourseID=9316
+
+<p>
+  <strong>Registration</strong>:
+  Registration is via <a href="https://www.st-andrews.ac.uk/pdms/index.php?Mode=Search&AudienceID=5&CourseID=9316">PDMS<a>.
+  The workshop is currently fully booked, but you can add yourself to the waiting list.
+</p>
+
 {% comment %}
 CONTACT EMAIL ADDRESS
 
