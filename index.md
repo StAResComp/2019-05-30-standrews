@@ -307,7 +307,7 @@ please preview your site before committing, and make sure to run
   We will be running pre-workshop drop-in sessions to assist with any setup issues.
   <ul>
     <li>Town - 2-4pm, Wednesday 22nd May 2019 at the Old Union Diner with Patrick McCann</li>
-    <li>North Haugh - 2-4pm, Tuesday 28th May 2019 in the Jack Cole Building with Alex Konovalov</li>
+    <li>North Haugh - 2-4pm, Tuesday 28th May 2019 in the Jack Cole Building (room 0.14) with Alex Konovalov</li>
   </ul>
 </p>
 <p>
