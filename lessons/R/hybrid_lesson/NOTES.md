@@ -286,12 +286,6 @@ rm(list=ls())
 
 ----
 
-**SLIDE: Challenge 01**
-
-![images/red_green_sticky.png](images/red_green_sticky.png)
-
-----
-
 **SLIDE: Variables**
 
 - **VARIABLES** are critical to programming in general, and also to working in `R`
@@ -432,7 +426,7 @@ character(0)
 
 ----
 
-**SLIDE: Challenge 02**
+**SLIDE: Challenge**
 
 Solution:
 
@@ -540,7 +534,7 @@ This will subtract 20 from the existing value of 122 to give a new value of 102 
     - **ONE FILES**: `*.Rproj` - information about your project
 
 - **CREATE DIRECTORIES IN PROJECT**
-- **Create directoris called `scripts` and `data`**
+- **Create directories called `scripts` and `data`**
     - Click on `New Folder`
     - Enter directory name (`scripts`)
     - Note that the directory now exists in the `Files` tab
@@ -703,9 +697,9 @@ data <- read.csv(file = "data/inflammation-01.csv", header = FALSE)
 
 ----
 
-**SLIDE: Challenge 03**
+**SLIDE: Challenge**
 
--*SOLUTION**
+**SOLUTION**
 
 ```R
 read.csv(file='file.csv', sep=';', dec=',')
@@ -790,7 +784,7 @@ read.csv(file='file.csv', sep=';', dec=',')
 
 ----
 
-**SLIDE: Challenge 04**
+**SLIDE: Challenge**
 
 ```R
 > animal <- c('d', 'o', 'n', 'k', 'e', 'y')
@@ -945,7 +939,7 @@ hist(avg_inflammation_patient, breaks=seq(5, 8, by=0.2))
 
 ----
 
-**SLIDE: Challenge 05**
+**SLIDE: Challenge**
 
 ```R
 # Plot standard deviation by day
@@ -1143,11 +1137,11 @@ txt <- "TRUE"
 
 ----
 
-**SLIDE: Challenge 06**
+**SLIDE: Challenge**
 
 - Let the students work for a couple of minutes, then demonstrate.
 
--*SOLUTION**
+**SOLUTION**
 
 ```R
 > answer = TRUE
@@ -1222,11 +1216,11 @@ xx <- c(1, 2, 'a')
 
 ----
 
-**SLIDE: Challenge 07**
+**SLIDE: Challenge**
 
 - Let the students work for a couple of minutes, then demonstrate.
 
--*SOLUTION**
+**SOLUTION**
 
 ```R
 > xx <- c(1.7, "a")
@@ -1275,7 +1269,7 @@ NAs introduced by coercion
 [1] NA NA NA
 ```
 
--*YOU CAN SKIP THE BITS BELOW FOR TIME AND MOVE ON TO FACTORS**
+**YOU CAN SKIP THE BITS BELOW FOR TIME AND MOVE ON TO FACTORS**
 
 - You can generate **NUMBER SEQUENCES** as vectors
     - The `seq()` function returns a vector
@@ -1398,7 +1392,7 @@ Levels: black calico tabby
 
 ----
 
-**SLIDE: Challenge 08**
+**SLIDE: Challenge**
 
 ```R
 > f <- factor(c("case", "control", "case", "control", "case"))
@@ -1470,7 +1464,7 @@ m2 <- matrix(c(1, 2), ncol = 3, nrow = 4)
 
 ----
 
-**SLIDE: Challenge 09 (5min)**
+**SLIDE: Challenge (5min)**
 
 ```R
 > m <- matrix(1:50, nrow = 5, ncol = 10)
@@ -1739,7 +1733,7 @@ df <- data.frame(a=c(1,2,3), b=c('eeny', 'meeny', 'miney'),
 
 ----
 
-**SLIDE: Challenge 10**
+**SLIDE: Challenge**
 
 ```R
 author_book <- data.frame(author_first = c('Charles', 'Ernst', "Theodosius"),
@@ -1751,7 +1745,7 @@ author_book <- data.frame(author_first = c('Charles', 'Ernst', "Theodosius"),
 
 ----
 
-**SLIDE: Challenge 11 (OPTIONAL)**
+**SLIDE: Challenge (OPTIONAL)**
 
 ```R
 > country_climate <- data.frame(country=c("Canada", "Panama",
@@ -1776,7 +1770,7 @@ author_book <- data.frame(author_first = c('Charles', 'Ernst', "Theodosius"),
 
 ----
 
-**SLIDE: Challenge 12 (OPTIONAL)**
+**SLIDE: Challenge (OPTIONAL)**
 
 ```R
 > df <- data.frame(a=c(1,2,3), b=c('eeny', 'meeny', 'miney'),
@@ -1962,7 +1956,7 @@ gapminder <- read.table("data/gapminder-FiveYearData.csv", sep=",", header=TRUE)
 
 ----
 
-**SLIDE: Challenge 13**
+**SLIDE: Challenge**
 
 ```R
 # Extract observations collected for the year 1957
@@ -2079,7 +2073,7 @@ also installing the dependencies ‘bindrcpp’, ‘glue’, ‘rlang’
 
 ----
 
-**SLIDE: Challenge 14**
+**SLIDE: Challenge**
 
 ![images/red_green_sticky.png](images/red_green_sticky.png)
 
@@ -2208,7 +2202,7 @@ p + geom_line()
 
 ----
 
-**SLIDE: Challenge 15**
+**SLIDE: Challenge**
 
 ```R
 # Plot life expectancy against time
@@ -2244,7 +2238,7 @@ p + geom_point()
     - had a `geom_point` `geom`
     - inherited *data* and *aesthetics* from the *base*
 
--*LAYERS ARE ADDED WITH THE `+` OPERATOR**
+**LAYERS ARE ADDED WITH THE `+` OPERATOR**
 
 ----
 
@@ -2282,7 +2276,7 @@ p + geom_line(aes(group=country)) + geom_point(alpha=0.4)
 
 ----
 
-**SLIDE: Challenge 16**
+**SLIDE: Challenge**
 
 ```R
 # Generate plot of life expectancy against time
@@ -2391,7 +2385,7 @@ p + facet_wrap(~continent)
 
 ----
 
-**SLIDE: Challenge 17 (10min)**
+**SLIDE: Challenge (10min)**
 
 ```R
 # Contrast GDP per capita against population
@@ -2523,7 +2517,7 @@ eurodata <- gapminder %>%
 
 ----
 
-**SLIDE: Challenge 18**
+**SLIDE: Challenge**
 
 ```R
 # Select life expectancy by country and year, only for Africa
@@ -2589,7 +2583,7 @@ afrodata <- gapminder %>%
 
 ----
 
-**SLIDE: Challenge 19**
+**SLIDE: Challenge**
 
 - **IN THE SCRIPT**
 
@@ -2625,7 +2619,7 @@ avg_lifexp_country <- gapminder %>%
     - **`count()` reports a new table of counts by group**
     - **`n()` is used to represent the count of rows, when calculating new values in `summarize()`**
 
--*DEMO IN CONSOLE**
+**DEMO IN CONSOLE**
 
 - **NOTE:** standard error is (std dev)/sqrt(n)
 
@@ -2777,7 +2771,7 @@ if (x > 10) {
 
 ----
 
-**SLIDE: Challenge 20**
+**SLIDE: Challenge**
 
 ```R
 # Are there any records for a year
@@ -2881,7 +2875,7 @@ while(z > 0.1){
 
 ----
 
-**SLIDE: Challenge 21**
+**SLIDE: Challenge**
 
 ```R
 # Challenge solution
@@ -2975,7 +2969,7 @@ for (l in letters) {
 
 ----
 
-**SLIDE: Challenge 22**
+**SLIDE: Challenge**
 
 ```R
 > v = 1:10000
@@ -3393,7 +3387,7 @@ calcGDP <- function(data, year_in=NULL, country_in=NULL) {
 
 ----
 
-- **SLIDE: Challenge 23**
+- **SLIDE: Challenge**
 
 ```R
 # Plot grid of country life expectancy
@@ -3515,7 +3509,7 @@ output: html_document
        - **We can define the location of the data in one place, and reuse the variable/have it propagate when we update the data**
        - Import the data in `setup`
     - **Write next section** (`Life expectancy in countries`)
-       - `Source` the `functions.R` file to get our solution to Challenge 23 (`plotLifeExp`)
+       - `Source` the `functions.R` file to get our solution to Challenge (`plotLifeExp`)
        - Use the imported function
        - `{r echo=FALSE}` shows output but not the code
     - **Change the letters**
