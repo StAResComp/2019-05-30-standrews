@@ -649,9 +649,9 @@ Data often comes in one of two types:
 **This kind of distinction critical in many applications (e.g. statistical modelling)**
 </div>
 
-> * **Factors** are special vectors that represent *categorical* data
-    * Stored as vectors of *labelled integers*
-    * **Cannot be treated as strings/text**
+* **Factors** are special vectors that represent *categorical* data
+* Stored as vectors of *labelled integers*
+* **Cannot be treated as strings/text**
 
 <center>
 <div class="attention">

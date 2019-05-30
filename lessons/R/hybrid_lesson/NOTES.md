@@ -1350,7 +1350,6 @@ a b c d
 - **CREATE FACTOR IN SCRIPT**
     - We create a **FACTOR WITH THREE ELEMENTS**
     - `Run` the line
-    - Commit the change
 
 ```R
 # Create a factor with three elements
@@ -1415,7 +1414,6 @@ Levels: black calico tabby
 
 - **CREATE MATRICES IN SCRIPT**
     - `Run` the lines when done
-    - Commit the changes
 
 ```R
 # Create matrix of zeroes
@@ -1602,7 +1600,7 @@ mask <- c(TRUE, FALSE, TRUE, FALSE, TRUE)
 ```
 
 - **COMPARATORS IN `R` RETURN VECTORS OF TRUE/FALSE VALUES**
-    - These can be **USED AS LOGICAL MASKS fOR DATA**
+    - These can be **USED AS LOGICAL MASKS FOR DATA**
     - Comparators **CAN BE COMBINED**
 
 ```R
