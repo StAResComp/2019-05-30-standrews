@@ -972,7 +972,7 @@ gapminder[, 3, drop=FALSE]    # column slice (get dataframe)
 ```
 
 
-## Challenge (5min)
+## Challenge (2min)
 
 I made some mistakes when subsetting `gapminder`, can you fix them?
 
@@ -1382,13 +1382,6 @@ Avoiding repetition (though automation) makes code
 </div>
 
 
-## Split-Apply-Combine
-
-<center>
-<img src="images/splitapplycombine.png" width="100%"/>
-</center>
-
-
 ## `select()` - Interactive Demo
 
 ```{r, eval=FALSE}
@@ -1427,7 +1420,7 @@ eurodata <- gapminder %>%
 
 ## Challenge (5min)
 
-Can you write a single line (which may span multiple lines in your script by including pipes) to produce a dataframe containing:
+Can you write a single `R` command (which may span multiple lines in your script by including pipes) to produce a dataframe containing:
 
 * life expectancy, country, and year data
 * only for African nations
@@ -1435,6 +1428,13 @@ Can you write a single line (which may span multiple lines in your script by inc
 How many rows does the dataframe have?
 
 <img src="images/red_green_sticky.png" width="100%" />
+
+
+## Split-Apply-Combine
+
+<center>
+<img src="images/splitapplycombine.png" width="100%"/>
+</center>
 
 
 ## `group_by()` - Interactive Demo

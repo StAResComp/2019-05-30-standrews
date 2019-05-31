@@ -1816,11 +1816,10 @@ write.table(df, "data/df_example.tab", sep="\t")
     - We need to provide a data source (**here, a file**), the separator character, and whether there's a header row
 
 ```R
-# Load gapminder data from a URL
+# Load gapminder data from file
 gapminder <- read.table("data/gapminder-FiveYearData.csv", sep=",", header=TRUE)
 ```
 
-- **ADD AND COMMIT TO REPO**
 - **CHECK THE DATA IN THE `Environment` TAB**
     - Click on `gapminder` in `Evironment` tab.
     - **NOTE COLUMNS**
@@ -2100,6 +2099,7 @@ also installing the dependencies ‘bindrcpp’, ‘glue’, ‘rlang’
 **SLIDE: The Grammar of Graphics**
 
 - We'll be using the `ggplot2` package, which is part of the **TIDYVERSE**, created initially by Hadley Wickham.
+    - The Grammar of Graphics was developed by Leland Wilkinson in the late 1990s
     - The Tidyverse provides **OTHER USEFUL PACKAGES** but you can use `ggplot2` on its own
 
 - `ggplot2` implements **A SET OF CONCEPTS CALLED THE GRAMMAR OF GRAPHICS**
@@ -2187,7 +2187,6 @@ p + geom_point()
 ```
 
 - **WE'VE RECREATED THE SCATTERPLOT WE SAW EARLIER**
-- **COMMIT CHANGES TO SCRIPT**
 
 - **What happens if we change the `geom`?**
 - **DEMO IN THE SCRIPT**
@@ -2293,6 +2292,7 @@ p + geom_line(aes(group=country)) + geom_point(alpha=0.35)
     - new axis scales, e.g. log scale, reverse scale, time scale
     - colour scaling (changing palettes)
     - shape and size scaling
+    - These are **LIKE LOOKING AT THE PLOT THROUGH A NEW LENS (NEW COLOUR, DISTORT LOCATIONS)**
 
 - **DEMO IN SCRIPT** (`gapminder.R`)
     - Rescale the plot first
@@ -2428,18 +2428,6 @@ p + geom_density_2d(alpha=0.5) + facet_wrap(~year)
 
 ----
 
-**SLIDE: Split-Apply-Combine**
-
-- The **general principle** `dplyr` supports is **SPLIT-APPLY-COMBINE**
-
-- We have a **dataset with several groups** (column `x`)
-- We **want to perform the same operation on each group, independently** - take a mean of `y` for each group, for example
-    - So we **SPLIT** the data into groups, on `x`
-    - Then we **APPLY** the operation (take the mean for each group)
-    - Then we **COMBINE** the results into a new table
-
-----
-
 **SLIDE: `select()` - Interactive Demo**
 
 - **DEMO IN CONSOLE**
@@ -2525,6 +2513,18 @@ afrodata <- gapminder %>%
 ```
 
 ![images/red_green_sticky.png](images/red_green_sticky.png)
+
+----
+
+**SLIDE: Split-Apply-Combine**
+
+- The **general principle** `dplyr` supports is **SPLIT-APPLY-COMBINE**
+
+- We have a **dataset with several groups** (column `x`)
+- We **want to perform the same operation on each group, independently** - take a mean of `y` for each group, for example
+    - So we **SPLIT** the data into groups, on `x`
+    - Then we **APPLY** the operation (take the mean for each group)
+    - Then we **COMBINE** the results into a new table
 
 ----
 
@@ -3136,7 +3136,7 @@ fahr_to_celsius <- function(temp) {
 - **YOUR FUTURE SELF WILL THANK YOU FOR DOING IT!**
 
 - **SOME GOOD PRINCIPLES TO FOLLOW WHEN WRITING DOCUMENTATION ARE:**
-    - Say what the code does (and why) - *more important than **how** *
+    - Say what the code does (and why) - *more important than **how**
     - Define your inputs and outputs
     - Provide an example
 
@@ -3243,6 +3243,24 @@ require(dplyr)
 ```
 
 - **So, that's *all* the `gapminder` data - but what if we want to get the data by year?**
+
+```R
+# Calculate total GDP in gapminder data
+calcGDP <- function(data, year_in) {
+  # Returns the gapminder data with additional column of total GDP
+  #
+  # data            - gapminder dataframe
+  # year_in         - year(s) to report data
+  #
+  # Example:
+  # gapminderGDP <- calcGDP(gapminder)
+  gdp <- gapminder %>%
+            mutate(gdp=(pop * gdpPercap)) %>%
+            filter(year %in% year_in)
+  return(gdp)
+}
+```
+
 - **DEMO IN SCRIPT** (`functions.R`)
     - `Source` script
 
@@ -3516,7 +3534,7 @@ output: html_document
     - **Add Numbered Table of Contents (where possible)**
        - Make the required changes in the header
 
-```R
+```text
 ---
 title: "Life Expectancies"
 author: "Leighton Pritchard"
@@ -3533,40 +3551,40 @@ output:
     toc: true
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+ ```{r setup, include=FALSE}
+ knitr::opts_chunk$set(echo = TRUE)
 
-# Path to gapminder data
-datapath <- "../data/gapminder-FiveYearData.csv"
+ # Path to gapminder data
+ datapath <- "../data/gapminder-FiveYearData.csv"
 
-# Letters to report on
-az <- c('G', 'Y', 'R')
+ # Letters to report on
+ az <- c('G', 'Y', 'R')
 
-# Load gapminder data
-gapminder <- read.csv(datapath, sep=",", header=TRUE)
+ # Load gapminder data
+ gapminder <- read.csv(datapath, sep=",", header=TRUE)
 
-# Source functions from earlier lesson
-source("../scripts/functions.R")
-```
+ # Source functions from earlier lesson
+ source("../scripts/functions.R")
+ ```
 
-# Introduction
+`# Introduction`
 
 We will present the life expectancies over time in a set of countries, using the gapminder data in the file `r datapath`.
 
 We will specifically focus on countries beginning with the letters: `r az`.
 
-# Life expectancy in `r az` countries
+`# Life expectancy in `r az` countries`
 
 In countries starting with these letters, the life expectancy is as plotted below.
 
 We use the code from our earlier challenge solution
 
-```{r plot_function}
-plotLifeExp
-```
+ ```{r plot_function}
+ plotLifeExp
+ ```
 
-```{r echo=FALSE}
-plotLifeExp(gapminder, az, wrap=TRUE)
-```
+ ```{r echo=FALSE}
+ plotLifeExp(gapminder, az, wrap=TRUE)
+ ```
 
 ```
